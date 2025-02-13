@@ -1,0 +1,150 @@
+:root {
+    --primary-color: #5a5ae0;
+    --secondary-color: #ff6b6b;
+    --accent-color: #4ecdc4;
+    --dark-color: #2d3436;
+    --light-color: #f9f9f9;
+    --gradient: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: var(--gradient);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header div {
+    display: flex;
+    justify-content: center;
+}
+
+header img {
+    width: min(90%, 360px);
+    height: auto;
+    margin: -3rem auto 0;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+section {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 1100px;
+    margin: 2rem auto;
+}
+
+.cliente, .funcionario, .livro {
+    background: white;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.cliente:hover, .funcionario:hover, .livro:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.cliente img, .funcionario img, .livro img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.cliente a, .funcionario a, .livro a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.7rem 1.2rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.cliente:hover a, .funcionario:hover a, .livro:hover a {
+    background: var(--gradient);
+    color: white;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+}
+
+footer {
+    background: var(--dark-color);
+    color: white;
+    text-align: center;
+    padding: 1.2rem;
+    width: 100%;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    section {
+        padding: 1.5rem;
+        grid-template-columns: 1fr;
+    }
+    
+    .cliente, .funcionario, .livro {
+        width: 100%;
+        padding: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.75rem;
+    }
+    
+    .cliente a, .funcionario a, .livro a {
+        font-size: 1rem;
+        padding: 0.6rem 1rem;
+    }
+    
+    .cliente img, .funcionario img, .livro img {
+        width: 90px;
+        height: 90px;
+    }
+}

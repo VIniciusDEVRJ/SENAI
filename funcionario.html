@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Funcionário</title>
+    <link rel="stylesheet" href="funcionario.css">
+</head>
+<body>
+    
+    <header>
+        <img src="img/Livraria.png" alt="Logo da Livraria Solari">
+        <h1>Livraria Solari</h1>
+    </header>
+
+  
+    <fieldset>
+        <label><strong>Cadastrar Funcionários</strong></label>
+        <hr>
+        <form action="CadastrarFuncionario.php" method="post">
+            <b>Digite CPF Do Funcionário:</b>
+            <input type="text" name="Cpf" required placeholder="Digite seu CPF (000.000.000-00)">
+
+            <b>Digite o Nome do Funcionário:</b>
+            <input type="text" name="Nome" required placeholder="Digite Seu Nome">
+
+            <b>Digite o Sobrenome Do Funcionário:</b>
+            <input type="text" name="Sobrenome" placeholder="Digite Seu Sobrenome">
+
+            <b>Digite o Telefone:</b>
+            <input type="text" name="Telefone" placeholder="(21) 0000-0000">
+
+            <b>Data de Nascimento:</b>
+            <input type="date" name="Data_Nascimento">
+
+            <b>Rua:</b>
+            <input type="text" name="Rua" placeholder="Ex: Rua Adilson Dias">
+
+            <b>Nº:</b>
+            <input type="text" name="Numero" placeholder="Digite o Número da Casa">
+
+            <b>Data de Admissão:</b>
+            <input type="date" name="adimicao">
+
+            <b>Complemento:</b>
+            <input type="text" name="Complemento" placeholder="Ex: Praça Da Padaria">
+
+            <b>Bairro:</b>
+            <input type="text" name="Bairro" placeholder="Ex: Jardim Bairro Branco">
+
+            <b>Cidade:</b>
+            <input type="text" name="Cidade" placeholder="Ex: Rio de Janeiro">
+
+            <b>Celular:</b>
+            <input type="text" name="Celular" placeholder="(21) 00000-0000">
+
+            <b>Email:</b>
+            <input type="text" name="Email" placeholder="Ex: rogerinho@email.com">
+
+            <b>RG:</b>
+            <input type="text" name="Rg" placeholder="Ex: 99.999.999-9">
+
+            <input type="submit" name="Cadastrar" value="Cadastrar">
+        </form>
+    </fieldset>
+
+ 
+    <footer>
+        <p>&copy; 2024 Livraria Solari. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
