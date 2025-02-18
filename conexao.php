@@ -5,7 +5,7 @@ $senha = "";// senha cadastrada no ato da instalação do banco de dados
 $dbname = "Livraria";// nomr do banco de dados que foi criado.ex: create data base dados
 
 //criar a conexão
-$conn = mysqli_connect($servidor,$ususario,$senha,$dbname);
+$conn = mysqli_connect($servidor,$usuario,$senha,$dbname);
 
 if(!$conn){
     die("Falha  na conexão: " . mysqli_connect_error()); 
