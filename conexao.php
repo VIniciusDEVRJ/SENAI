@@ -1,6 +1,6 @@
 <?php
 $servidor="localhost";//caminho do servidor de hospedagem
-$bbvb = "root";// Nome de usuário do banco de dados nom ato da instalação do mesmo
+$usuario = "root";// Nome de usuário do banco de dados nom ato da instalação do mesmo
 $senha = "";// senha cadastrada no ato da instalação do banco de dados
 $dbname = "Livraria";// nomr do banco de dados que foi criado.ex: create data base dados
 
